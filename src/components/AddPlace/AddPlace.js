@@ -13,6 +13,7 @@ export default class AddPlace extends React.Component {
   handleAddBtn = () => {
     if (this.state.place.trim() === "") return;
     this.props.handleAddBtn(this.state.place);
+    this.setState({ place: "" });
   };
 
   render() {
