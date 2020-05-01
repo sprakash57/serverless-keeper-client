@@ -8,6 +8,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 
+window.LOG_LEVEL = "DEBUG";
 Amplify.configure({
   Auth: {//means Cognito
     mandatorySignIn: true,

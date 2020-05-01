@@ -33,7 +33,7 @@ export default function Login() {
     return (
         <div className="Login">
             <form onSubmit={handleSubmit}>
-                <FormGroup controlId="email" bsSize="large">
+                <FormGroup controlId="email" >
                     <FormLabel>Email</FormLabel>
                     <FormControl
                         autoFocus
@@ -42,7 +42,7 @@ export default function Login() {
                         onChange={handleFieldChange}
                     />
                 </FormGroup>
-                <FormGroup controlId="password" bsSize="large">
+                <FormGroup controlId="password" >
                     <FormLabel>Password</FormLabel>
                     <FormControl
                         value={fields.password}
@@ -52,7 +52,7 @@ export default function Login() {
                 </FormGroup>
                 {isLoading
                     ? <LoaderButton />
-                    : <Button block bsSize="large" disabled={!validateForm()} type="submit">Login</Button>}
+                    : <Button block disabled={!validateForm()} type="submit">Login</Button>}
             </form>
         </div>
     );
